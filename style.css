@@ -387,7 +387,11 @@ footer p {
     justify-content: space-around;
     gap: 20px;
   }
-  .section-wrapper {
+  #hero-section,
+  #about-us-section,
+  #mission-section,
+  #contact-us-section,
+  #gallery-section {
     padding-left: 52px;
     padding-right: 42px;
   }

@@ -30,10 +30,30 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
+.section-wrapper {
+  padding-right: 26px;
+  padding-left: 30px;
+  max-width: 884px;
+  width: 100%;
+  margin: auto;
+}
 
+#about-us-section,
+#gallery-section,
+#mission-section,
+#contact-us-section,
+#reviews-section {
+  padding-top: 66px;
+  padding-bottom: 84px;
+  width: 100%;
+}
 .nav-list {
   /*hide navigation items*/
   display: none;
@@ -68,7 +88,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  position: relative;
   height: calc(100vh - 62px);
 }
 
@@ -89,9 +108,6 @@ body {
 }
 
 /*about us section*/
-#about-us-section {
-  padding: 66px 26px 84px 30px;
-}
 
 .about-us-title {
   font-size: var(--h2-size-mobile);
@@ -120,9 +136,9 @@ body {
 
 /*misson section*/
 
-#misson-section {
+#mission-section {
   background-color: var(--background-dark-brown);
-  padding: 66px 26px 0px 30px;
+  padding-bottom: 0px;
   text-align: center;
 }
 
@@ -222,8 +238,7 @@ body {
   border-radius: var(--border-radius);
 }
 
-#gallery-section {
-  padding: 66px 26px 80px 30px;
+#gallery-section .section-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
@@ -246,7 +261,6 @@ body {
 
 /*contact us section*/
 #contact-us-section {
-  padding: 66px 26px 80px 30px;
   background-color: var(--background-medium-brown);
 }
 
@@ -308,7 +322,7 @@ button:hover {
 }
 
 #reviews-section {
-  padding: 66px 26px 52px 30px;
+  padding-bottom: 52px;
   text-align: center;
 }
 
@@ -381,20 +395,13 @@ footer p {
     font-size: var(--h1-size-tablet);
     right: 32px;
   }
-  #about-us-section {
+  #about-us-section .section-wrapper {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
     gap: 20px;
   }
-  #hero-section,
-  #about-us-section,
-  #mission-section,
-  #contact-us-section,
-  #gallery-section {
-    padding-left: 52px;
-    padding-right: 42px;
-  }
+
   .about-us-title,
   .mission-title {
     font-size: var(--h2-size-tablet);
@@ -409,7 +416,7 @@ footer p {
 
   .mission-image-container {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .mission-img {
@@ -420,7 +427,7 @@ footer p {
     font-size: var(--h3-size-tablet);
   }
 
-  #gallery-section {
+  #gallery-section .section-wrapper {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 252px);
     grid-template-areas:
@@ -436,7 +443,11 @@ footer p {
   .contact-us-text {
     padding: 0;
   }
-  #contact-us-section {
+  .call {
+    padding-top: 24px;
+  }
+
+  #contact-us-section .section-wrapper {
     display: flex;
     flex-wrap: nowrap;
     gap: 42px;
@@ -480,7 +491,7 @@ footer p {
 
   .nav-list {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     list-style: none;
   }
 

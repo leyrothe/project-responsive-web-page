@@ -11,12 +11,12 @@ hamburger.addEventListener('click',() => {
     if(navigationOpen){
      navContainer.classList.add('navigation-mobile');
      navList.classList.add('nav-list-mobile');
-     navList.style.display = 'flex';
+    
     }else{
     /*else if navigation is closed remove classes = hide menu*/
      navContainer.classList.remove('navigation-mobile');
      navList.classList.remove('nav-list-mobile');
-      navList.style.display = 'none'; 
+ 
     }
     
 });
@@ -26,12 +26,9 @@ window.addEventListener('resize', () => {
     // Desktop view
     navContainer.classList.remove('navigation-mobile');
     navList.classList.remove('nav-list-mobile');
-    navList.style.display = 'flex';
     navigationOpen = false;
   } else {
-    // Mobile view: hide nav unless explicitly opened
     if (!navigationOpen) {
-      navList.style.display = 'none';
       navigationOpen = false;
     }
   }

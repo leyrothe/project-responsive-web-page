@@ -15,8 +15,8 @@
   --h1-size-desktop: 96px;
   --h2-size-mobile: 32px;
   --h2-size-tablet: 54px;
-  --h3-size-tablet: 32px;
-  --h3-size-mobile: 24px;
+  --label-size-tablet: 32px;
+  --label-size-mobile: 24px;
   --title-weight: 700;
   --regular-paragraph-font-size: 16px;
   --regular-paragraph-font-weight: 400;
@@ -24,7 +24,7 @@
 }
 
 * {
-  /* default reset*/
+  /* default reset */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -37,6 +37,9 @@ html {
 body {
   font-family: "Roboto", sans-serif;
 }
+
+/*** mobile first approach ***/
+
 .section-wrapper {
   padding-right: 26px;
   padding-left: 30px;
@@ -45,30 +48,29 @@ body {
   margin: auto;
 }
 
-#about-us-section,
-#gallery-section,
-#mission-section,
-#contact-us-section,
-#reviews-section {
+.spacing {
   padding-top: 66px;
   padding-bottom: 84px;
-  width: 100%;
-}
-.nav-list {
-  /*hide navigation items*/
-  display: none;
 }
 
 .navigation {
-  /*navigation container*/
+  /* navigation container */
   position: sticky;
   top: 0;
   z-index: 1;
   background-color: var(--background-dark-brown);
   color: var(--white-color);
+  font-size: 20px;
+  font-weight: var(--title-weight);
   padding: 22px 10px;
 }
-/*hamburger icon*/
+
+.nav-list {
+  /* hide navigation items */
+  display: none;
+}
+
+/* hamburger icon */
 #icon {
   width: 42px;
   height: 32px;
@@ -80,7 +82,7 @@ body {
   height: 100%;
 }
 
-/**styles for hero section**/
+/* styles for hero section */
 #hero-section {
   background-image: url(assets/images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg);
   background-size: cover;
@@ -89,6 +91,7 @@ body {
   width: 100%;
   height: calc(100vh - 63px);
 }
+
 #hero-section .section-wrapper {
   height: 100%;
   display: flex;
@@ -106,7 +109,7 @@ body {
   text-align: right;
 }
 
-/*about us section*/
+/* about us section */
 
 .about-us-title {
   font-size: var(--h2-size-mobile);
@@ -128,12 +131,13 @@ body {
   height: auto;
   margin: 0 auto;
 }
+
 .about-us-img {
   height: 100%;
   width: 100%;
 }
 
-/*misson section*/
+/* misson section */
 
 #mission-section {
   background-color: var(--background-dark-brown);
@@ -170,7 +174,7 @@ body {
 }
 
 .icon-text {
-  font-size: var(--h3-size-mobile);
+  font-size: var(--label-size-mobile);
   font-weight: var(--title-weight);
   color: var(--white-color);
 }
@@ -179,7 +183,7 @@ body {
   margin-bottom: 50px;
 }
 
-/*gallery section*/
+/* gallery section */
 .gallery-img-1 {
   grid-area: a;
 }
@@ -219,9 +223,10 @@ body {
   grid-area: r;
   height: 80px;
   width: 100%;
+  padding: 24px;
   background-color: var(--background-light-grey);
   color: var(--black-color);
-  font-size: var(--h3-size-mobile);
+  font-size: var(--label-size-mobile);
   font-weight: var(--title-weight);
 }
 
@@ -258,7 +263,7 @@ body {
     "h";
 }
 
-/*contact us section*/
+/* contact us section */
 #contact-us-section {
   background-color: var(--background-medium-brown);
 }
@@ -280,13 +285,14 @@ button {
   border-radius: var(--border-radius);
   margin-top: 60px;
 }
+
 button:hover {
   cursor: pointer;
   color: var(--white-color);
   background-color: var(--background-dark-brown);
 }
 
-/*review section*/
+/* review section */
 
 .reviews-title {
   font-size: var(--h2-size-mobile);
@@ -332,7 +338,7 @@ button:hover {
   margin-bottom: 56px;
 }
 
-/*4 images section*/
+/* images section */
 
 .img-1 {
   grid-area: w;
@@ -370,6 +376,7 @@ footer {
   align-items: center;
   padding: 32px 0px 30px 0px;
 }
+
 footer p {
   color: var(--white-color);
   font-size: 10px;
@@ -388,12 +395,14 @@ footer p {
   color: var(--link-hover-color);
   text-decoration: none;
 }
+
 @media (min-width: 768px) {
-  /*rules for displays that are above 768px*/
+  /* rules for displays that are above 768px => for tablet */
   .hero-title {
     font-size: var(--h1-size-tablet);
     right: 32px;
   }
+
   #about-us-section .section-wrapper {
     display: flex;
     flex-wrap: nowrap;
@@ -405,10 +414,12 @@ footer p {
   .mission-title {
     font-size: var(--h2-size-tablet);
   }
+
   .about-us-image-container,
   .about-us-wrapper {
     flex: 1 1 50%;
   }
+
   .about-us-img {
     object-fit: cover;
   }
@@ -422,8 +433,9 @@ footer p {
     width: 50px;
     height: 50px;
   }
+
   .icon-text {
-    font-size: var(--h3-size-tablet);
+    font-size: var(--label-size-tablet);
   }
 
   #gallery-section .section-wrapper {
@@ -434,14 +446,17 @@ footer p {
       "d r e"
       "f g h";
   }
+
   .rectangle {
     font-size: var(--h2-size-tablet);
     height: 100%;
     text-align: center;
   }
+
   .contact-us-text {
     padding: 0;
   }
+
   .call {
     padding-top: 24px;
   }
@@ -451,10 +466,12 @@ footer p {
     flex-wrap: nowrap;
     gap: 42px;
   }
+
   .contact-us-title {
     flex: 1 1 30%;
     font-size: var(--h2-size-tablet);
   }
+
   .contact-us-texts {
     flex: 1 1 70%;
   }
@@ -462,9 +479,11 @@ footer p {
   .reviews-title {
     font-size: var(--h2-size-tablet);
   }
+
   .review-initial-text {
     padding: 0 110px;
   }
+
   .reviews-wrapper {
     display: flex;
     gap: 16px;
@@ -480,7 +499,7 @@ footer p {
 }
 
 @media (min-width: 992px) {
-  /*rules for displays that are above 992px*/
+  /* rules for displays that are above 992px => for desktop */
   #icon {
     display: none;
   }
@@ -514,7 +533,6 @@ footer p {
 }
 
 .navigation-mobile {
-  /*navigation container*/
   display: flex;
   flex-direction: column-reverse;
   gap: 16px;

@@ -557,3 +557,7 @@ footer p {
 .nav-item a:hover {
   text-decoration: underline;
 }
+
+.active {
+  text-decoration: underline;
+}
